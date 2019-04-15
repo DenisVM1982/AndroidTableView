@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataClicked(int rowIndex, Object clickedData) {
                 Toast.makeText(MainActivity.this, ((String[])clickedData)[0], Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                intent.putExtra("fname", ((String[])clickedData)[0].toString());
                 startActivity(intent);
             }
         });
